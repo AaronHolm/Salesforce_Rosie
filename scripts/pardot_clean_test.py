@@ -41,8 +41,7 @@ def header_function(header_line):
   return
 
 def simple_post():
-  #data = json.dumps({"email":"aholm@seia.org", "password":"Sunshine201$", "user_key": "caa507f1827e43c7e27462e933756a4c"})
-  payload = {"email":"aholm@seia.org", "password":"Sunshine201$", "user_key": "caa507f1827e43c7e27462e933756a4c"}
+  payload = {"email":PARDOT_EMAIL, "password":PARDOT_PASS, "user_key": PARDOT_USER_KEY}
   session = requests.Session()
   response = session.post('https://pi.pardot.com/api/login/version/3 HTTP/1.1', data=payload)
   #print(response.content, '\n', response.status_code)
